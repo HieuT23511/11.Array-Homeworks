@@ -6,18 +6,37 @@
 </head>
 <body>
 <script>
-    let arr = [1, 3, 33, 2, -3, -5, 9];
-    let maxArr = arr[0];
-    let maxArr2 = arr [0];
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] > maxArr) {
-            maxArr2 = maxArr;
-            maxArr = arr[i];
-        } else if (arr[i] >= maxArr2 && arr[i] !== maxArr) {
-            maxArr2 = arr [i];
+    const arr = []
+
+    function creatNewArray() {
+        let arrLength = prompt('Input Array.Length:')
+        for (let i = 0; i < arrLength; i++) {
+            let arrElements = prompt(`${arrLength - i} Elements left `);
+            arr.push(arrElements);
         }
     }
-    document.write(`${maxArr2} is the Second Max in array`)
+    creatNewArray();
+    const arr1 = [...arr];
+    arr1.sort(function (a, b) {
+        return b - a;
+    });
+    alert(`Array đã tạo [${arr}] có số lớn thứ 2 là ${arr1[1]}`);
+
+
+    // Cach nay khong ap dung duoc cho mang co so nguyen am
+    // creatNewArray();
+    // let maxArr = arr[0];
+    // let maxArr2 = arr [0];
+    // for (let i = 1; i < arr.length; i++) {
+    //     if (arr[i] > maxArr) {
+    //         maxArr2 = maxArr;
+    //         maxArr = arr[i];
+    //     } else if (arr[i] >= maxArr2 && arr[i] !== maxArr) {
+    //         maxArr2 = arr [i];
+    //     }
+    // }
+    // document.write(`${maxArr2} is the Second Max in array`);
+
 </script>
 </body>
 </html>
