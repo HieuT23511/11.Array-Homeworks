@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 5</title>
+</head>
+<body>
+<script>
+    const arr1 = []
+        let arrLength = prompt('Input Array.Length:')
+        for (let i = 0; i < arrLength; i++) {
+            let arrElements1 = prompt(`Array 1 have ${arrLength - i} Elements left `);
+            arr1.push(arrElements1);
+        }
+    const arr2 = []
+    for (let j = 0; j < arrLength; j++) {
+        let arrElements2 = prompt(`Array2 have ${arrLength - j} Elements left `);
+        arr2.push(arrElements2);
+    }
+    let arrTotal=[]
+    for (let k = 0; k <arrLength ; k++) {
+        arrTotal.push((+arr1[k])+(+arr2[k]));
+    }
+    document.write(`New Array is ${arrTotal}`);
+</script>
+</body>
+</html>
